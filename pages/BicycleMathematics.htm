@@ -1,0 +1,279 @@
+<html>
+<head>
+<title> Mathematics of Bicycle Geometry
+ </title>
+</head>
+<body bgcolor="#88CCFE">
+<h2><b>
+ <font size="6" face="Arial" ><center> The Mathematics of Bicycle Geometry </center></font>
+</b></h2>
+
+<hr>
+<font face="Arial">
+<p><b> Preface </b>
+<p> The following terms and definitions are my own, and some will not correspond to conventional use.
+ In particular, I will refer to the axis of the steering tube as the "Steering Head Line" (SHL), and refer
+to its rake-angle as the "Steering Head Angle" (SHA).  Moreover, I will use the "motorcycle" convention of
+measuring rake angle as a departure from the vertical, rather than from the horizontal.  I find this
+convention more natural, as the most "naive" steering arrangement is given by SHA=0 (vertical steering tube),
+and it is there that the degrees of steering applied to the handlebars is exactly equal to the resulting
+degrees of turn evidenced in the Front Wheel Track (FWT).
+<p> The distance from the SHL to the center of the front wheel is often referred to as the "rake distance",
+or simply the "rake" (and sometimes, as the "offset".)  I will refer to this distance as the Front Steering
+Radius (FSR).
+<p> Refer to the accompanying diagrams for the visual illustration of most of these terms. 
+</font>
+
+<hr>
+<!-- https://psychotechnica.github.io/images/zbike/ -->
+
+<p> 
+<a> <center> <img src="https://psychotechnica.github.io/images/zbike/file0330_bgeomath-1-md.png" alt="Figure 1"> </center>
+<p>
+
+<p>
+<font size="5" face="Arial" ><b> Terms and Definitions </b></font>
+<p>
+
+<font face=arial>
+<UL>
+<LI> <B> 0.  The Ground Plane (GP) </B><br><br>
+
+The horizontal plane upon which the bicycle is assumed to navigate.<br><br>
+
+<LI> <B> 1.  Front Wheel Axis Line (FWA) </B><br><br>
+
+   The line in space about which the front wheel rotates.<br><br>
+
+<LI> <B> 2.  Rear Wheel Axis Line (RWA) </B><br><br>
+
+   The line in space about which the rear wheel rotates.<br><br>
+
+<LI> <B> 3.  Front Wheel Center (FWC) </B><br><br>
+
+   The center point of the front wheel axis.<br><br>
+
+<LI> <B> 4.  Rear Wheel Center (RWC) </B><br><br>
+
+   The center point of the rear wheel axis.<br><br>
+
+<LI> <B> 5.  Front Wheel Radius (R1) </B><br><br>
+
+<LI> <B> 6.  Rear Wheel Radius (R2) </B><br><br>
+
+<LI> <B> 7.  Front Wheel Plane (FWP) </B><br><br>
+
+   The plane in space defined by the orientation of the front wheel.  This plane
+   is perpendicular to the FWA and passes through the FWC.<br><br>
+
+<LI> <B> 8.  Rear Wheel Plane (RWP) </B><br><br>
+
+   The plane in space defined by the orientation of the rear wheel.  This plane
+   is perpendicular to the RWA and passes through the RWC.<br><br>
+
+<LI> <B> 9.  Steering Angle (STEER) </B><br><br>
+
+   The angle between the the FWP and the RWP (i.e., as viewed down a "steering column").
+   Note that this is generally NOT the degree of actual vehicle turning effected.<br><br>
+
+<LI> <B> 10.  Reference Wheel Displacement (RWD) </B><br><br>
+
+    <UL> <font face="courier"> RWD = dist(FWC,RWC) when STEER = 0. </font></UL><br>
+
+<LI> <B> 11.  Reference Wheelbase (RWB) </B><br><br>
+
+   The horizontal component of RWD.  RWB = RWD iff R1 = R2.<br><br>
+
+   In general, one has <font face="courier"> RWB = sqrt( RWD^2 + (R1-R2)^2 ).</font><br><br>
+
+   Note that during a turn, the effective wheelbase (EWB) will differ from the
+   reference wheelbase due to the steering and the cant of the bicycle in a turn.<br><br>
+
+<LI> <B> 12.  Steering Head Line (SHL) </B><br><br>
+
+   The line in space formed by the intersection of FWP and RWP when STEER != 0.<br><br>
+
+   This is the axis ordinarily associated with the steering column.<br><br>
+
+<LI> <B> 13.  Steering Head Point (SHP) </B><br><br>
+
+   Also called simply the "steering head", this is the intersection of the SHL
+   with the GP (ground plane).  Often given as a distance from the front wheel
+   contact point (FCP), it is said to be positive steering head (or positive
+   "castor") when located ahead of the FCP.<br><br>
+
+   If the front wheel radius R1, the rake-angle SHA, and the front steering radius
+   FSR (aka, "offset") are known, one can calculate the steering head by <br><br>
+
+    <UL> <font face="courier"> SHP = (R1*sin(SHA) - FSR)/cos(SHA) </font></UL><br>
+
+
+<LI> <B> 14.  Steering Head Angle (SHA) </B><br><br>
+
+   Also referred to as the "rake" of the steering, this is the angle of the SHL
+   measured from vertical, when the RWP is held vertical.  For the sake of
+   convention, we will assign a positive SHA for "normal" slanting rake.<br><br>
+
+<LI> <B> 15.  Forward Steering Radius (FSR) </B><br><br>
+
+   The perpendicular distance between the SHL and the FWC.<br><br>
+
+   Assuming that the front wheel radii R1, the steering head angle SHA, and the
+   steering head point SHP (as measured forward of the FRONT wheel contact point)
+   are known, the formula for calculating the front steering radius is given by<br><br>
+
+     <UL> <font face="courier"> FSR = R1*sin(SHA) - SHP*cos(SHA) </font></UL><br>
+
+<LI> <B> 16.  Rearward Steering Radius (RSR) </B><br><br>
+
+   The perpendicular distance between the SHL and the RWC.<br><br>
+
+   Assuming that the rear wheel radii R2, the steering head angle SHA, and the
+   steering head point SHP (as measured forward of the REAR wheel contact point)
+   are known, the formula for calculating the rear steering radius is given by<br><br>
+
+     <UL> <font face="courier"> RSR = SHP*cos(SHA) - R2*sin(SHA) </font></UL><br>
+
+<LI> <B> 17.  Front Contact Point (FCP) </B><br><br>
+
+   The contact point of the front wheel with the GP.<br><br>
+
+<LI> <B> 18.  Rear Contact Point (RCP) </B><br><br>
+
+   The contact point of the rear wheel with the GP.<br><br>
+
+<LI> <B> 19.  Front Wheel Track (FWT) </B><br><br>
+
+   The line in the GP formed by the SHP and FCP, or more generally, by the
+   intersection of the Front Wheel Plane (FWP) and the Ground Plane (GP).<br><br>
+
+   This line gives the "heading" of the front wheel during a turn.<br><br>
+
+<LI> <B> 20.  Rear Wheel Track (RWT) </B><br><br>
+
+   The line in the GP formed by the SHP and RCP, or more generally, by the
+   intersection of the Rear Wheel Plane (RWP) and the Ground Plane (GP).<br><br>
+
+   This line gives the "heading" of the rear wheel during a turn.<br><br>
+
+<LI> <B> 21.  Turning Angle (TURN) </B><br><br>
+
+   The (ordinarily) acute angle formed between FWT and RWT.<br><br>
+
+   If the rear wheel is held vertical at a heading of 0, the TURN is equal to the
+   relative Front Wheel Track (FWT) and is called the FWTURN, given by<br><br>
+
+     <UL> <font face="courier"> FWTURN = atan( tan(STEER)*cos(SHA) ) </font></UL><br>
+
+<LI> <B> 22.  Turning Center Line (TCL) </B><br><br>
+
+   The vertical line formed by the intersection of two vertical planes, the first plane
+   being perpendicular to the FWT and containing the FCP, the second being perpendicular
+   to the RWT and containing the RCP.<br><br>
+
+   The bicycle's various "turning radii" are essentially distances measured from the TCL.<br><br>
+
+<LI> <B> 23.  Turning Radii </B><br><br>
+
+   There are several radii that are of interest in describing the "size" of a turn.
+   If the issue is avoiding ground objects on the outside or inside of a turn, one is
+   interested in the Front Wheel Turning Radius (FWTR) or the Rear Wheel Turning Radius
+   (RWTR).  These are the distances from the TCL to the FCP and RCP, respectively.<br><br>
+
+   As the FWTR and RWTR are typically unequal, we can define the Greater and Lesser
+   Contact Turning Radii (GCTR and LCTR) to be the greater and lesser of FWTR and RWTR.
+   During a constant turn, the bicycle's wheels essentially trace two circles of size
+   FWTR and RWTR about the TCL.<br><br>
+
+   As far as the dynamics of a turn are concerned, the Effective Turning Radius (ETR)
+   must be considered.  This is the distance from the TCL to the bicycle's (and rider's)
+   center of gravity.  Since a bicycle must be canted inward to a turn to maintain
+   balance, the ETR is always less than the GCTR, and is typically less than the LCTR.<br><br>
+
+<LI> <B> 24.  Canting Baseline (CBL) </B><br><br>
+
+   The Canting Baseline is the line containing both the FCP and RCP.  When canting the
+   bicycle into a turn, the bicycle is essentially rotating with respect to the GP about
+   the canting baseline.  The "centrifugal force" created in a turn, on the bicycle's
+   center of gravity, must be sufficient to hold the bike at a constant angle to the
+   ground, in terms of rotation about the canting baseline.<br><br>
+
+<p>
+<a> <center> <img src="https://psychotechnica.github.io/images/zbike/file0330_bgeomath-2-md.png" alt="Figure 2"> </center>
+<p>
+
+<LI> <B> 25.  Front Wheel Cant (FWCANT) </B><br><br>
+
+   With the steering head line (SHL) held in a vertical plane (i.e., the bicycle itself
+   is NOT canted), the FWCANT is the angle of departure of the front wheel plane (FWP)
+   from vertical, as steering is applied.<br><br>
+
+     <UL> <font face="courier"> FWCANT = asin( sin(STEER)*sin(SHA) ) </font></UL><br>
+   
+<LI> <B> 26.  Canting Angle </B><br><br>
+
+   During a constant, balanced turn at constant speed, imagine a plumb-bob hanging from
+   a line tied to the bicycle's center of gravity.  That plumb-bob will point exactly
+   to the canting baseline, and the angle it makes from the vertical is the canting angle.<br><br>
+   
+<LI> <B> 27.  Steering Wheelbase (SWB) </B><br><br>
+
+   The distance between the contact points of the front and rear wheels with the ground,
+   depending upon the degree of steering angle, while the bike is held vertical (cant=0).
+   This distance is a function of the steering angle SHA, the FSR the RSR, and the front
+   and rear wheel radii.<br><br>
+
+<LI> <B> 28.  Effective Wheelbase (EWB) </B><br><br>
+
+   The distance between the contact points of the front and rear wheels with the ground,
+   when both steering and canting is considered.<br><br>
+
+<LI> <B> 29.  Steering Lift (STLIFT) </B><br><br>
+
+   Steering Lift is a measure of the degree to which a bicycle's center of gravity rises
+   (or falls) as steering is increased.  Positive steering lift causes the bike to slightly
+   "resist steering" (tend to straighten under vertical load) and means that the rider must
+   exert predictably positive force in order increase the steering angle.  The property of
+   positive steering lift results from a combination of factors, primarily the Forward
+   Steering Radius (FSR) and the Steering Head Angle (SHA), but are also affected by the
+   wheel diameters and the effective wheelbase. <br><br>
+
+   In general, steering lift should be kept close to neutral if measured while the
+   bike is held vertical, and rise only slowly as large steering angles are applied.
+   Excessive steering lift will make the bike difficult to turn. <br><br>
+
+   Nominally, one can ignore rear wheel radius and wheelbase, and take the steering lift
+   to be proportional to the rise (or fall) of the Front Steering Center (FSC) as steering
+   is applied, while the rear wheel is kept vertical.  The following formula (derived further
+   below) expresses steering lift in terms of front wheel radius R1, front steering radius FSR,
+   rake angle SHA, and the amount of STEER applied:<br><br>
+
+     <UL> <font face="courier"> STLIFT = R1*cos( asin( sin(STEER)*sin(SHA) ) + FSR*sin(SHA)*(1 - cos(STEER)) </font></UL><br>
+
+   Note that STLIFT is comprised of two terms:  The first term gives the amount by which the
+   front wheel center drops toward the ground during steer, due to the canting of the front wheel
+   (in turn, due to the rake angle).  In the absence of steering offset (FSR = 0) the front of
+   the bicycle frame would drop in proportion.  The second term expresses the degree to which
+   the front steering center rises with respect to the front wheel center, due to the amount
+   of steering offset present. <br><br>
+
+</UL> 
+
+</font>
+
+<p>
+<font size="5" face="Arial" ><b> Derivations </b></font>
+<p>
+
+<font face=arial>
+<UL> (forthcoming - please be patient)
+</UL>
+</font>
+
+<p>
+
+<hr>
+<center><a HREF="https://psychotechnica.github.io/"> [ Home ] </a></center>
+<hr>
+</body>
+</html>
