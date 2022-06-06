@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+    background: #103040;
+  	background-image: url('https://psychotechnica.github.io/images/Psytek_BG_2.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	float: none;
+	width: 100%;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0);
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #101820;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create a single wide column */
+/* Main column */
+.maincolumn {
+  float: center;  
+  width: 100%;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 40%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.tcard {
+  background-color: #202838;
+  padding: 20px;
+  margin-top: 20px;
+  color: #C0C8F0;
+}
+
+/* Add a card effect for images */
+.pcard {
+  background-color: #202838;
+  padding: 20px;
+  margin-top: 20px;
+  color: #C0C8F0;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  float: center;
+  padding: 20px;
+  text-align: center;
+  background: #202838;
+  margin-top: 20px;
+}
+
+a { color: #8090F0; }
+a:visited { color: #C070A0; }
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+	<center><a> <img src="https://psychotechnica.github.io/images/mainTitle.png"> </a></center>
+
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" style="float:right">Link</a>
+</div>
+
+<div class="row">
+  <div class="maincolumn">
+ 
+	<table border="0" cellpadding="10" cellspacing="10" width="80%" align="center" style="background-color:rgba(0, 0, 0, 0);">
+    <tr><td>
+			  <table border="0" cellpadding="20" cellspacing="20" width="100%" align="center" bgcolor="#101820">
+			  <tr>
+				<td width="100%"> <font face="Arial" size="4" color="#E0E8F0">
+					<h2><b>
+					 <font size="6" face="Arial" ><center> Schools-Sim Particle Force Simulator </font>
+					</b></h2>
+
+					<hr>
+						<center><img src="https://psychotechnica.github.io/images/Schools/Schools_Portal_Image_1_hint.png" alt="schools_image" ></center>
+					<hr>
+
+					<p>
+					<font size="5" face="Arial" ><b> Schools-Sim </b></font>
+					<p>
+					<font face="arial"> The Schools-Sim application gets its name from my original attempt to simulate the flows of "schools of fish"
+					(or flocks of birds).  This soon grew into a general particle-force simulator, wherein three findamental types of "particles"
+					(Red, Green and Blue) may be given either symmetric or asymmetric "force" rules, for up to three different fields.
+					<p>
+					In complete violation of the known laws of physics, you can assign asymmetric force rules between particle types.  For instance,
+					you can have Red attracted to Blue, but have Blue repelled by Red.  This would cause a Red-Blue pair to accelerate forever, one
+					chasing the other, if not for a limiting velocity that is imposed.  Additionally there are three "forms" of fields that may be put into effect:
+					<UL>
+					<LI> <b>Seek/Repel</b> (radial force lines):  Irrespective of given velocity, particles may experience an attractive or repulsive force in the
+					presence of other particles (of a specified type), with strength that varies with the familiar inverse-square law.  Thus, once can
+					simulate gravitational attraction, or electrostatic attraction or repulsion.
+					<LI> <b>Meetv/Antiv</b> (parallel transverse force lines):  With respect to a moving particle's vector (speed and direction), nearby particles 
+					may experience a force that drags them along the same vector (Meetv) or opposite that vector (Antiv), with a strength proportional both
+					to the moving particle's speed, and their distance to that particle (again, by inverse-square law).
+					<LI> <b>Handl/Handr</b> (orthogonal transverse force lines):  With respect to a particle moving "North", nearby particles will feel a force that
+					drags them West (Handl) or East (Handr), with a strength proportional both to the moving particle's speed, and their distance to that
+					particle (again, by inverse-square law).
+					</UL>
+					<p>
+						<center><img src="https://psychotechnica.github.io/images/Schools/Schools_Sim_Forces_small.png" alt="schools_forces" ></center>
+					<p>
+					For each of the 9 possible ordered particle-type parings { (R,R), (G,G), (B,B), (R,G), (G,R), (R,B), (B,R), (G,B,), (B,G) }, and the (0, 1, 2, or 3)
+					force types that may be assigned to that pairing, there are two "Radii of Influence" ( 0 < NearRadius < FarRadius ) that may be assigned.  For a
+					given particle and force-rule, particles beyond "FarRadius" are ignored (or else simulations would take forever to run), particles within FarRadius
+					but beyond NearRadius are applied one collection of rules, and particles within the NearRadius are affected by BOTH the first set of rules and an
+					additional and independent set of rules.
+					<p>
+					The three types of particles (R,G,B) may be assigned color-specific masses, and F=ma is properly applied, although I have tended to study only the
+					cases where all particles have the same (unit) mass.  The various force-rules may be given unique strengths, and generally are.
+					<p>
+					The time-wise "fade" of particle brightness with each cycle can be varied. allowing longer or shorter particle "contrails" to be generated, revealing
+					the particle's recent path.
+					<p>
+					Each simulation begins with a "population density" of R, G and B particles scattered randomly across the topologically-toroidal field (so
+					edges wrap).  I have generally specified equal density (population proportions 1/3 each color).  Each particle is given an initial random velocity
+					(direction and speed).
+					<p>
+					The application allows for a random set of rules to be generated with reasonable limits to values, and the rules-file so generated gets a "name" of
+					the 8-char hexadecimal form XXXXXXXX, being the current "Unix Seconds" (32-bit int value) measured at the time of rule creation, and employed as the
+					seed supplied to the random generator.  Likewise, the graphic "frames" that are output are labeled with this rule-name (and the number of cycles into
+					the simulation at which point the image was generated.  The application allows this 8-character timestamp to be input as the randomizing seed, to
+					allow the same set of rules to be applied, with scale changes (size of bit-field, rate of frame-output) so that an "interesting" result can be
+					regenerated at higher resolution or for more cycles.
+					
+					The Schools-Sim software and source code (and dependent libraries and source code) will be available soon.
+					</font>
+					
+					
+					<p>
+					<font size="5" face="Arial" ><b> Some School-Sim Creations - with brief descriptions </b></font>
+					<p>
+					<font face="arial"> 
+					
+
+					</font>					
+					
+					
+				</td>
+			  </tr>
+			  </table>
+			  
+	</td></tr>		  
+	<tr><td>
+			  
+			  <table border="0" cellpadding="20" cellspacing="20" width="100%" align="center" bgcolor="#101820">
+			  <tr>
+				<td width="32%"> 
+					<a HREF="https://psychotechnica.github.io/video/sr-00000003.mp4">
+					<center><img src="https://psychotechnica.github.io/images/Schools/medium.png" alt="sample_image" ></center>
+				</td>
+				<td width="32%"> 
+					<a HREF="https://psychotechnica.github.io/video/sr-00000003.mp4">
+					<center><img src="https://psychotechnica.github.io/images/Schools/medium.png" alt="sample_image" ></center>
+				</td>
+				<td width="32%"> 
+					<a HREF="https://psychotechnica.github.io/video/sr-00000003.mp4">
+					<center><img src="https://psychotechnica.github.io/images/Schools/medium.png" alt="sample_image" ></center>
+				</td>
+				
+			  </tr>
+			  </table>
+	</td></tr>
+	<tr><td>
+			  
+			  <table border="0" cellpadding="20" cellspacing="20" width="100%" align="center" bgcolor="#101820">
+			  <tr>
+				<td width="32%"> 
+					<a HREF="https://psychotechnica.github.io/video/sr-00000003.mp4">
+					<center><img src="https://psychotechnica.github.io/images/Schools/medium.png" alt="sample_image" ></center>
+				</td>
+				<td width="32%"> 
+					<a HREF="https://psychotechnica.github.io/video/sr-00000003.mp4">
+					<center><img src="https://psychotechnica.github.io/images/Schools/medium.png" alt="sample_image" ></center>
+				</td>
+				<td width="32%"> 
+					<a HREF="https://psychotechnica.github.io/video/sr-00000003.mp4">
+					<center><img src="https://psychotechnica.github.io/images/Schools/medium.png" alt="sample_image" ></center>
+				</td>
+				
+			  </tr>
+			  </table>
+	</td></tr>
+
+	</table>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
