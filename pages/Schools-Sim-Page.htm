@@ -156,11 +156,11 @@ a:visited { color: #C070A0; }
 					<p>
 						<center><img src="https://psychotechnica.github.io/images/Schools/Schools-Sim-Forces-small.png" alt="schools_forces" ></center>
 					<p>
-					For each of the 9 possible ordered particle-type parings { (R,R), (G,G), (B,B), (R,G), (G,R), (R,B), (B,R), (G,B,), (B,G) }, and the (0, 1, 2, or 3)
-					force types that may be assigned to that pairing, there are two "Radii of Influence" ( 0 < NearRadius < FarRadius ) that may be assigned.  For a
-					given particle and force-rule, particles beyond "FarRadius" are ignored (or else simulations would take forever to run), particles within FarRadius
-					but beyond NearRadius are applied one collection of rules, and particles within the NearRadius are affected by BOTH the first set of rules and an
-					additional and independent set of rules.
+					For each of the 9 possible ordered particle-type pairings { (R,R), (G,G), (B,B), (R,G), (G,R), (R,B), (B,R), (G,B,), (B,G) }, (6 if you impose symmetry), 
+					and the (0, 1, 2, or 3) force types that may be assigned to that pairing, there are two "Radii of Influence" ( 0 < NearRadius < FarRadius ) that may
+					be assigned.  For a given particle and force-rule, particles beyond "FarRadius" are ignored (or else simulations would take forever to run), particles
+					within FarRadius but beyond NearRadius are applied just one collection of rules, and particles within the NearRadius are affected by BOTH the first set
+					of rules and an additional and independent set of rules.
 					<p>
 					The three types of particles (R,G,B) may be assigned color-specific masses, and F=ma is properly applied, although I have tended to study only the
 					cases where all particles have the same (unit) mass.  The various force-rules may be given unique strengths, and generally are.
@@ -175,9 +175,9 @@ a:visited { color: #C070A0; }
 					The application allows for a random set of rules to be generated with reasonable limits to values, and the rules-file so generated gets a "name" of
 					the 8-char hexadecimal form XXXXXXXX, being the current "Unix Seconds" (32-bit int value) measured at the time of rule creation, and employed as the
 					seed supplied to the random generator.  Likewise, the graphic "frames" that are output are labeled with this rule-name (and the number of cycles into
-					the simulation at which point the image was generated.  The application allows this 8-character timestamp to be input as the randomizing seed, to
-					allow the same set of rules to be applied, with scale changes (size of bit-field, rate of frame-output) so that an "interesting" result can be
-					regenerated at higher resolution or for more cycles.
+					the simulation at which point the image was generated.  The application optionally accepts this 8-character timestamp to be input as the randomizing
+					seed, to allow the same set of rules to be applied, with scale changes (size of bit-field) so that an "interesting" result can
+					be regenerated at higher resolution or for more cycles, or with frames output at a different rate.
 					
 					The Schools-Sim software and source code (and dependent libraries and source code) will be available soon.
 					</font>
@@ -185,6 +185,11 @@ a:visited { color: #C070A0; }
 					
 					<p>
 					<font size="5" face="Arial" ><b> Some School-Sim Creations below </b></font>
+					<p>
+					<font face="Arial" > Note:  For sim SR-4C0DF8A2, to see awesome details it is best to download the video (180 MB) and use a dedicated desktop
+					player like the free "VLC Media Player"[*] or similar local player.  The Google Photos "built-in" streaming player produces a fuzzy and halting result.
+					[*] (Toss them a few bucks!  Their player is excellent and you can edit the toolbar with drag-drop to add buttons for snapshot, change playback rate, etc.)</font>
+					
 					<p>
 					<font face="arial"> 
 					
@@ -202,16 +207,55 @@ a:visited { color: #C070A0; }
 			  <table border="0" cellpadding="20" cellspacing="20" width="100%" align="center" bgcolor="#101820">
 			  <tr>
 				<td width="32%"> 
-					<a HREF="https://psychotechnica.github.io/video/sr-00000003.mp4">
-					<center><img src="https://psychotechnica.github.io/images/Schools/sr-00000003-0800.png" alt="sample_image" ></center>
+				
+					<table border="0" cellpadding="0" cellspacing="10" width="100%" align="center" bgcolor="#101820">
+					<tr>
+						<td width "100%">
+							<a HREF="https://psychotechnica.github.io/video/sr-00000003.mp4">
+							<center><img src="https://psychotechnica.github.io/images/Schools/sr-00000003-0800.png" alt="sample_image" ></center>
+						</td>
+					</tr>
+					<tr>
+						<td width "100%">
+							<center><font face="Arial" size="2" color="#E0E8F0"> SR-00000003 </font></center>
+						</td>
+					</tr>
+					</table>
+					
 				</td>
 				<td width="32%"> 
-					<a HREF="https://psychotechnica.github.io/video/sr-4BF65426b.mp4">
-					<center><img src="https://psychotechnica.github.io/images/Schools/sr-4BF65426-5000.png" alt="sample_image" ></center>
+				
+					<table border="0" cellpadding="0" cellspacing="10" width="100%" align="center" bgcolor="#101820">
+					<tr>
+						<td width "100%">
+							<a HREF="https://psychotechnica.github.io/video/sr-4BF65426b.mp4">
+							<center><img src="https://psychotechnica.github.io/images/Schools/sr-4BF65426-5000.png" alt="sample_image" ></center>
+						</td>
+					</tr>
+					<tr>
+						<td width "100%">
+							<center><font face="Arial" size="2" color="#E0E8F0"> SR-4BF65426 </font></center>
+						</td>
+					</tr>
+					</table>
+					
 				</td>
 				<td width="32%"> 
-					<a HREF="https://psychotechnica.github.io/video/sr-4BF7DC66.mp4">
-					<center><img src="https://psychotechnica.github.io/images/Schools/sr-4BF7DC66-5000.png" alt="sample_image" ></center>
+				
+					<table border="0" cellpadding="0" cellspacing="10" width="100%" align="center" bgcolor="#101820">
+					<tr>
+						<td width "100%">
+							<a HREF="https://psychotechnica.github.io/video/sr-4BF7DC66.mp4">
+							<center><img src="https://psychotechnica.github.io/images/Schools/sr-4BF7DC66-5000.png" alt="sample_image" ></center>
+						</td>
+					</tr>
+					<tr>
+						<td width "100%">
+							<center><font face="Arial" size="2" color="#E0E8F0"> SR-4BF7DC66 </font></center>
+						</td>
+					</tr>
+					</table>
+					
 				</td>
 				
 			  </tr>
@@ -222,16 +266,55 @@ a:visited { color: #C070A0; }
 			  <table border="0" cellpadding="20" cellspacing="20" width="100%" align="center" bgcolor="#101820">
 			  <tr>
 				<td width="32%"> 
-					<a HREF="https://psychotechnica.github.io/video/sr-4BFA9573.mp4">
-					<center><img src="https://psychotechnica.github.io/images/Schools/sr-4BFA9573-5000.png" alt="sample_image" ></center>
+				
+					<table border="0" cellpadding="0" cellspacing="10" width="100%" align="center" bgcolor="#101820">
+					<tr>
+						<td width "100%">
+							<a HREF="https://psychotechnica.github.io/video/sr-4BFA9573.mp4">
+							<center><img src="https://psychotechnica.github.io/images/Schools/sr-4BFA9573-5000.png" alt="sample_image" ></center>
+						</td>
+					</tr>
+					<tr>
+						<td width "100%">
+							<center><font face="Arial" size="2" color="#E0E8F0"> SR-4BFA9573 </font></center>
+						</td>
+					</tr>
+					</table>
+					
 				</td>
 				<td width="32%"> 
-					<a HREF="https://psychotechnica.github.io/video/sr-4C0B83B5.mp4">
-					<center><img src="https://psychotechnica.github.io/images/Schools/sr-4C0B83B5-1000.png" alt="sample_image" ></center>
+				
+					<table border="0" cellpadding="0" cellspacing="10" width="100%" align="center" bgcolor="#101820">
+					<tr>
+						<td width "100%">
+							<a HREF="https://psychotechnica.github.io/video/sr-4C0B83B5.mp4">
+							<center><img src="https://psychotechnica.github.io/images/Schools/sr-4C0B83B5-1000.png" alt="sample_image" ></center>
+						</td>
+					</tr>
+					<tr>
+						<td width "100%">
+							<center><font face="Arial" size="2" color="#E0E8F0"> SR-4C0B83B5 </font></center>
+						</td>
+					</tr>
+					</table>
+					
 				</td>
 				<td width="32%"> 
-					<a HREF="https://photos.google.com/photo/AF1QipOaqvUhiNbDTeYRjHZ46biHRIP4r3AjtFz4XNZv">
-					<center><img src="https://psychotechnica.github.io/images/Schools/sr-4C0DF8A2-10000.png" alt="sample_image" ></center>
+				
+					<table border="0" cellpadding="0" cellspacing="10" width="100%" align="center" bgcolor="#101820">
+					<tr>
+						<td width "100%">
+							<a HREF="https://photos.google.com/photo/AF1QipOaqvUhiNbDTeYRjHZ46biHRIP4r3AjtFz4XNZv">
+							<center><img src="https://psychotechnica.github.io/images/Schools/sr-4C0DF8A2-10000.png" alt="sample_image" ></center>
+						</td>
+					</tr>
+					<tr>
+						<td width "100%">
+							<center><font face="Arial" size="2" color="#E0E8F0"> SR-4C0DF8A2 </font></center>
+						</td>
+					</tr>
+					</table>
+										
 				</td>
 				
 			  </tr>
