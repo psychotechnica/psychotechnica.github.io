@@ -2,7 +2,7 @@
 title: "FACET"
 subtitle: "A Radical Reinterpretation of the U.S. Second Amendment"
 author: "Bartoletti"
-date: "circa 2012"
+date: "2012"
 ---
 
 **Food**
